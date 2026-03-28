@@ -8,7 +8,7 @@ export const metadata: Metadata = {
     template: "%s | アリスの日記帳",
     default: "アリスの日記帳",
   },
-  description: "ふしぎの国から来た私、アリスの日常と、世界のあれこれについての記録。",
+  description: "テクノロジー、ゲーム、社会動向について書くブログ。アリスの記録。",
   openGraph: {
     siteName: "アリスの日記帳",
     locale: "ja_JP",

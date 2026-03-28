@@ -31,13 +31,13 @@ body {
   min-height: 100vh;
 }
 
-/* Diary ruled lines */
+/* Subtle ruled lines background */
 .ruled-bg {
   background-image: repeating-linear-gradient(
     transparent,
     transparent 1.79rem,
-    rgba(196, 135, 154, 0.06) 1.79rem,
-    rgba(196, 135, 154, 0.06) 1.8rem
+    rgba(196, 135, 154, 0.04) 1.79rem,
+    rgba(196, 135, 154, 0.04) 1.8rem
   );
 }
 
@@ -70,19 +70,27 @@ body {
 }
 
 .prose-alice p {
-  margin-bottom: 1.4rem;
+  margin-bottom: 1.5rem;
 }
 
 .prose-alice h2 {
   font-family: var(--font-serif);
   font-weight: 400;
-  font-size: 1.1rem;
-  color: #f5ede0;
-  border-bottom: 1px solid rgba(196, 135, 154, 0.3);
-  padding-bottom: 0.4rem;
-  margin-top: 2.5rem;
-  margin-bottom: 1rem;
-  letter-spacing: 0.05em;
+  font-size: 1.05rem;
+  color: #f0e4d4;
+  border-bottom: 1px solid rgba(196, 135, 154, 0.25);
+  padding-bottom: 0.5rem;
+  margin-top: 3rem;
+  margin-bottom: 1.2rem;
+  letter-spacing: 0.08em;
+}
+
+.prose-alice h2::before {
+  content: "◇ ";
+  color: #c4879a;
+  font-size: 0.65em;
+  vertical-align: middle;
+  margin-right: 0.3em;
 }
 
 .prose-alice h3 {
@@ -90,8 +98,9 @@ body {
   font-weight: 400;
   font-size: 1rem;
   color: #e8d9c8;
-  margin-top: 2rem;
+  margin-top: 2.2rem;
   margin-bottom: 0.8rem;
+  letter-spacing: 0.05em;
 }
 
 .prose-alice strong {
@@ -101,11 +110,12 @@ body {
 
 .prose-alice blockquote {
   border-left: 2px solid #c4879a;
-  background: rgba(196, 135, 154, 0.05);
-  padding: 0.8rem 1.2rem;
+  background: rgba(196, 135, 154, 0.04);
+  padding: 0.9rem 1.4rem;
   font-style: normal;
   color: #b8a99c;
-  margin: 1.5rem 0;
+  margin: 2rem 0;
+  border-radius: 0 2px 2px 0;
 }
 
 .prose-alice a {
@@ -115,19 +125,49 @@ body {
 }
 
 .prose-alice hr {
-  border-color: rgba(196, 135, 154, 0.2);
-  margin: 2.5rem 0;
+  border: none;
+  border-top: 1px solid rgba(196, 135, 154, 0.15);
+  margin: 3rem 0;
+  position: relative;
+  text-align: center;
+}
+
+.prose-alice hr::after {
+  content: "✦";
+  color: rgba(196, 135, 154, 0.4);
+  font-size: 0.55rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--bg-primary);
+  padding: 0 0.5rem;
 }
 
 .prose-alice ul {
   list-style: none;
-  padding-left: 1.2rem;
+  padding-left: 1.4rem;
+  margin-bottom: 1.5rem;
+}
+
+.prose-alice ul li {
+  margin-bottom: 0.4rem;
 }
 
 .prose-alice ul li::before {
   content: "◆";
   color: #c4879a;
-  font-size: 0.5rem;
-  margin-right: 0.6rem;
+  font-size: 0.45rem;
+  margin-right: 0.7rem;
   vertical-align: middle;
+}
+
+.prose-alice ol {
+  padding-left: 1.6rem;
+  margin-bottom: 1.5rem;
+}
+
+.prose-alice ol li {
+  margin-bottom: 0.4rem;
+  color: #e8d9c8;
 }

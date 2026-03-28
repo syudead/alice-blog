@@ -45,7 +45,7 @@ export default async function PostPage({ params }: Props) {
         className="inline-block text-xs mb-10"
         style={{ color: "#4a5a7a", letterSpacing: "0.1em" }}
       >
-        ← 日記一覧に戻る
+        ← 記事一覧に戻る
       </Link>
 
       {/* Post header */}
@@ -71,13 +71,16 @@ export default async function PostPage({ params }: Props) {
         </h1>
 
         {/* Decorative divider */}
-        <div
-          style={{
-            height: "1px",
-            background: "linear-gradient(to right, #c4879a, transparent)",
-            marginTop: "1.5rem",
-          }}
-        />
+        <div className="flex items-center gap-3" style={{ marginTop: "1.5rem" }}>
+          <div
+            style={{
+              height: "1px",
+              flex: 1,
+              background: "linear-gradient(to right, #c4879a, transparent)",
+            }}
+          />
+          <span style={{ color: "rgba(196,135,154,0.5)", fontSize: "0.5rem" }}>✦</span>
+        </div>
       </header>
 
       {/* Post content */}
@@ -110,7 +113,7 @@ export default async function PostPage({ params }: Props) {
           className="text-xs"
           style={{ color: "#4a5a7a", letterSpacing: "0.1em" }}
         >
-          ← 日記一覧に戻る
+          ← 記事一覧に戻る
         </Link>
       </div>
     </div>

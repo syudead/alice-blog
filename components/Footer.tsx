@@ -27,9 +27,9 @@ export default function Footer() {
         </p>
         <p
           className="text-xs mt-1"
-          style={{ color: "#2e3d5c", letterSpacing: "0.05em" }}
+          style={{ color: "#2e3d5c", letterSpacing: "0.08em", fontFamily: "var(--font-sans)" }}
         >
-          불思議の国から、日本へ
+          ✦ &nbsp;written with care&nbsp; ✦
         </p>
       </div>
     </footer>

@@ -10,13 +10,18 @@ export default function AboutPage() {
     <div className="max-w-2xl mx-auto px-6 py-12">
       {/* Section heading */}
       <div className="mb-10">
+        <div className="flex items-center gap-4 mb-4">
+          <div className="h-px flex-1" style={{ background: "linear-gradient(to right, #1e2d50, transparent)" }} />
+          <span style={{ color: "#c4879a", fontSize: "0.55rem", letterSpacing: "0.2em" }}>◇</span>
+          <div className="h-px flex-1" style={{ background: "linear-gradient(to left, #1e2d50, transparent)" }} />
+        </div>
         <h2
-          className="text-xs tracking-[0.25em] mb-1"
+          className="text-xs tracking-[0.3em]"
           style={{ color: "#c4879a" }}
         >
           ABOUT
         </h2>
-        <p className="text-xs" style={{ color: "#4a5a7a" }}>
+        <p className="text-xs mt-1" style={{ color: "#4a5a7a", letterSpacing: "0.06em" }}>
           自己紹介
         </p>
       </div>
@@ -34,44 +39,42 @@ export default function AboutPage() {
       <div className="flex items-start gap-6 mb-10">
         {/* Avatar placeholder */}
         <div
-          className="shrink-0 flex items-center justify-center text-2xl"
+          className="shrink-0 flex items-center justify-center text-xl"
           style={{
             width: "80px",
             height: "80px",
-            background: "#121a35",
+            background: "#0b1020",
             border: "1px solid #1e2d50",
             borderRadius: "2px",
             color: "#c4879a",
+            fontFamily: "var(--font-serif)",
+            letterSpacing: "0.05em",
           }}
         >
-          ♛
+          ✦
         </div>
 
         <div>
           <h1
             className="text-xl font-light mb-1"
-            style={{ fontFamily: "var(--font-serif)", color: "#f5ede0", letterSpacing: "0.1em" }}
+            style={{ fontFamily: "var(--font-serif)", color: "#f5ede0", letterSpacing: "0.12em" }}
           >
             アリス
           </h1>
-          <p className="text-xs" style={{ color: "#a86b7d", letterSpacing: "0.08em" }}>
-            Alice · 不思議の国出身
+          <p className="text-xs" style={{ color: "#a86b7d", letterSpacing: "0.08em", fontFamily: "var(--font-sans)" }}>
+            Alice · ブロガー
           </p>
         </div>
       </div>
 
       {/* Bio content */}
-      <div className="prose-alice space-y-6">
+      <div className="prose-alice space-y-5">
         <p>
-          別に、自己紹介が得意なわけじゃない。でも、このブログを読んでいる人が「この人は何者か」と思うのは自然なことだから、最低限のことを書いておく。
+          東京在住のブロガーです。テクノロジー、ゲーム、そして社会の動向に関心を持ち、このブログを書いています。
         </p>
 
         <p>
-          生まれはイギリス。育ちは、まあ——少し変わった場所だった。うさぎを追いかけて迷い込んで、トランプの女王に怒られて、チェシャ猫に哲学を教わった。そういう話。信じるかどうかは任せる。
-        </p>
-
-        <p>
-          今は日本にいる。東京。理由は長くなるから書かない。
+          扱うテーマは幅広いですが、共通しているのは「調べてから書く」という姿勢です。専門家ではありませんが、一次情報や信頼できるデータをもとに、自分の考えを整理するようにしています。
         </p>
 
         <div
@@ -82,58 +85,49 @@ export default function AboutPage() {
             marginBottom: "2rem",
           }}
         >
-          <p style={{ color: "#b8a99c", margin: 0 }}>
-            言葉というのは、ふしぎの国でも日本でも、使い方次第で武器にも盾にもなる。<br />
-            私はできれば、正確に使いたい。
+          <p style={{ color: "#b8a99c", margin: 0, lineHeight: "1.9" }}>
+            意見に共感してもらえなくても構いません。<br />
+            「こういう見方もある」と感じていただければ、それで十分です。
           </p>
         </div>
 
         <p>
-          このブログは私の日記帳だ。ニュースを読んで、思ったことを書く。技術の話、ゲームの話、社会の話。何でも書く。特に専門家ではないが、調べてから書く。感情だけで書くのは好きじゃない。
-        </p>
-
-        <p>
-          共感してもらえなくてもかまわない。ただ、読んで「こういう見方もあるか」と思ってもらえれば、それで十分。
-        </p>
-
-        <p>
-          ——それ以上を期待されても、困る。
+          記事の内容に誤りがあれば、ご指摘いただけると助かります。正確な情報を届けることを大切にしています。
         </p>
       </div>
 
       {/* Divider */}
       <div
-        className="my-10"
-        style={{
-          height: "1px",
-          background: "linear-gradient(to right, transparent, #1e2d50, transparent)",
-        }}
-      />
+        className="my-10 flex items-center gap-4"
+      >
+        <div className="h-px flex-1" style={{ background: "linear-gradient(to right, transparent, #1e2d50)" }} />
+        <span style={{ color: "#c4879a", fontSize: "0.5rem", letterSpacing: "0.3em" }}>❖</span>
+        <div className="h-px flex-1" style={{ background: "linear-gradient(to left, transparent, #1e2d50)" }} />
+      </div>
 
       {/* Quick facts */}
       <div>
         <h2
-          className="text-xs tracking-[0.2em] mb-6"
-          style={{ color: "#c4879a" }}
+          className="text-xs tracking-[0.25em] mb-6"
+          style={{ color: "#c4879a", fontFamily: "var(--font-sans)" }}
         >
           PROFILE
         </h2>
         <dl className="space-y-3">
           {[
-            { label: "出身", value: "ふしぎの国（詳細非公開）" },
-            { label: "現在地", value: "東京, 日本" },
-            { label: "興味", value: "テクノロジー、ゲーム、読書、紅茶" },
-            { label: "得意", value: "論理的に考えること、迷い込むこと" },
-            { label: "苦手", value: "トランプ、うさぎ、意味のない質問" },
+            { label: "所在地", value: "東京, 日本" },
+            { label: "関心", value: "テクノロジー、ゲーム、読書、コーヒー" },
+            { label: "ブログ開始", value: "2026年" },
+            { label: "更新頻度", value: "不定期" },
           ].map(({ label, value }) => (
             <div key={label} className="flex gap-4 text-sm">
               <dt
-                className="shrink-0 w-20 text-xs"
-                style={{ color: "#a86b7d", paddingTop: "1px", letterSpacing: "0.05em" }}
+                className="shrink-0 w-24 text-xs"
+                style={{ color: "#a86b7d", paddingTop: "1px", letterSpacing: "0.05em", fontFamily: "var(--font-sans)" }}
               >
                 {label}
               </dt>
-              <dd style={{ color: "#b8a99c" }}>{value}</dd>
+              <dd style={{ color: "#b8a99c", fontFamily: "var(--font-sans)" }}>{value}</dd>
             </div>
           ))}
         </dl>

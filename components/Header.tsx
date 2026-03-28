@@ -22,25 +22,25 @@ export default function Header() {
           <Link href="/" className="block no-underline">
             <div
               className="text-xs mb-2"
-              style={{ color: "#c4879a", letterSpacing: "0.3em", fontFamily: "var(--font-sans)" }}
+              style={{ color: "#c4879a", letterSpacing: "0.35em", fontFamily: "var(--font-sans)" }}
             >
-              ✦ ALICE&apos;S DIARY ✦
+              ✦ &nbsp;ALICE&apos;S NOTES&nbsp; ✦
             </div>
             <h1
               className="text-3xl font-light"
               style={{
                 fontFamily: "var(--font-serif)",
                 color: "#f5ede0",
-                letterSpacing: "0.15em",
+                letterSpacing: "0.18em",
               }}
             >
               アリスの日記帳
             </h1>
             <div
               className="text-xs mt-2"
-              style={{ color: "#b8a99c", letterSpacing: "0.1em" }}
+              style={{ color: "#6a7a9a", letterSpacing: "0.08em", fontFamily: "var(--font-sans)" }}
             >
-              不思議の国からやってきた、私の記録
+              テクノロジーとゲームについての所感と記録
             </div>
           </Link>
         </div>
@@ -48,7 +48,7 @@ export default function Header() {
         {/* Decorative divider */}
         <div className="flex items-center gap-3 mb-5">
           <div className="flex-1 h-px" style={{ background: "linear-gradient(to right, transparent, #1e2d50)" }} />
-          <span style={{ color: "#c4879a", fontSize: "0.6rem" }}>◆◇◆</span>
+          <span style={{ color: "#c4879a", fontSize: "0.55rem", letterSpacing: "0.2em" }}>✦ ❖ ✦</span>
           <div className="flex-1 h-px" style={{ background: "linear-gradient(to left, transparent, #1e2d50)" }} />
         </div>
 
@@ -57,14 +57,14 @@ export default function Header() {
           <Link
             href="/"
             className="nav-link text-sm"
-            style={{ color: "#b8a99c", letterSpacing: "0.12em", textDecoration: "none" }}
+            style={{ color: "#b8a99c", letterSpacing: "0.15em", textDecoration: "none", fontFamily: "var(--font-sans)" }}
           >
-            日記
+            記事
           </Link>
           <Link
             href="/about"
             className="nav-link text-sm"
-            style={{ color: "#b8a99c", letterSpacing: "0.12em", textDecoration: "none" }}
+            style={{ color: "#b8a99c", letterSpacing: "0.15em", textDecoration: "none", fontFamily: "var(--font-sans)" }}
           >
             自己紹介
           </Link>
