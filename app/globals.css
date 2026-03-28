@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;600&family=Noto+Sans+JP:wght@300;400;500&display=swap");
+@import "tailwindcss";
+
+:root {
+  --bg-primary: #0d1224;
+  --bg-secondary: #121a35;
+  --text-primary: #f5ede0;
+  --text-muted: #b8a99c;
+  --accent: #c4879a;
+  --accent-dim: #a86b7d;
+  --border: #1e2d50;
+  --font-sans: "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
+  --font-serif: "Noto Serif JP", "Hiragino Mincho ProN", "Yu Mincho", serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  font-weight: 300;
+  line-height: 1.8;
+  letter-spacing: 0.02em;
+  min-height: 100vh;
+}
+
+/* Diary ruled lines */
+.ruled-bg {
+  background-image: repeating-linear-gradient(
+    transparent,
+    transparent 1.79rem,
+    rgba(196, 135, 154, 0.06) 1.79rem,
+    rgba(196, 135, 154, 0.06) 1.8rem
+  );
+}
+
+/* Gradient accent line */
+.accent-line::before {
+  content: "";
+  display: block;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--accent), transparent);
+  margin-bottom: 1.5rem;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--accent-dim);
+  border-radius: 2px;
+}
+
+/* MDX prose styles */
+.prose-alice {
+  color: #e8d9c8;
+  font-size: 0.95rem;
+  line-height: 2.1;
+}
+
+.prose-alice p {
+  margin-bottom: 1.4rem;
+}
+
+.prose-alice h2 {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  font-size: 1.1rem;
+  color: #f5ede0;
+  border-bottom: 1px solid rgba(196, 135, 154, 0.3);
+  padding-bottom: 0.4rem;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  letter-spacing: 0.05em;
+}
+
+.prose-alice h3 {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  font-size: 1rem;
+  color: #e8d9c8;
+  margin-top: 2rem;
+  margin-bottom: 0.8rem;
+}
+
+.prose-alice strong {
+  color: #f5ede0;
+  font-weight: 500;
+}
+
+.prose-alice blockquote {
+  border-left: 2px solid #c4879a;
+  background: rgba(196, 135, 154, 0.05);
+  padding: 0.8rem 1.2rem;
+  font-style: normal;
+  color: #b8a99c;
+  margin: 1.5rem 0;
+}
+
+.prose-alice a {
+  color: #c4879a;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.prose-alice hr {
+  border-color: rgba(196, 135, 154, 0.2);
+  margin: 2.5rem 0;
+}
+
+.prose-alice ul {
+  list-style: none;
+  padding-left: 1.2rem;
+}
+
+.prose-alice ul li::before {
+  content: "◆";
+  color: #c4879a;
+  font-size: 0.5rem;
+  margin-right: 0.6rem;
+  vertical-align: middle;
+}
